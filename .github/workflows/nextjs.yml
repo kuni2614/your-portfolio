@@ -15,7 +15,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '18' # Ensure compatibility with Next.js 13
+          node-version: '18' # This is essential for Next.js compatibility
 
       - name: Install dependencies
         run: npm install
@@ -30,4 +30,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: './out' # Ensure this matches the output directory
+          publish_dir: './out' # Ensure this matches the output directory in the export
